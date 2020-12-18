@@ -1,0 +1,35 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background: #DFDEDC;
+}
+
+div.logo {
+  width: 80px;
+  height: 107px;
+  margin: 20px auto;
+  margin-bottom: 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('images/Real-Madrid_logo.png');
+}
+
+hr {
+  width: 100%;
+  border-top: 1px solid grey;
+}
+
+div.headLink {
+  text-align: center;
+}
+
+div.headLink a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+div.headLink a:hover {
+  color: #CA0808;
+}
