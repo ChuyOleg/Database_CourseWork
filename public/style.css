@@ -6,13 +6,19 @@ html, body {
 }
 
 div.logo {
-  width: 80px;
   height: 107px;
   margin: 20px auto;
   margin-bottom: 0px;
+}
+
+div.logo a {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 107px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('images/Real-Madrid_logo.png');
+  background-image: url('images/Real_Madrid_logo.png');
 }
 
 hr {

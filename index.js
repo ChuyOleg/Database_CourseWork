@@ -11,20 +11,20 @@ const app = express();
 // app.use(express.json());
 // app.use('/api', userRouter);
 
-const func = async () => {
-  const users = await db.query('select * from person');
+const getClubs = async () => {
+  const users = await db.query('select * from Contracts');
   const rows = users.rows;
-  // console.log(rows[0]);
+  return rows;
 }
 
-app.get('/user', (req, res) => {
-  res.json({ name: 'Oleg' });
+app.get('/user', async (req, res) => {
+  const clubs = await getClubs();
+  res.json(clubs);
 })
 
 app.use(express.static('public'));
 
 app.get('/favicon.ico', (req, res) => {
-  func();
   res.send('');
 })
 
