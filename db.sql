@@ -52,7 +52,7 @@ create table Matches(
   Opponent int references FootballCLubs(ClubID),
   Result varchar(8),
   TotalAttempts varchar(8),
-  Location varchar(8),
+  Location int references Location(LocationID),
   Season varchar(16),
   Tournament varchar(255),
   Date date

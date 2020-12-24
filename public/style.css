@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   font-size: 16px;
   background: #DFDEDC;
+  overflow-x: hidden;
 }
 
 div.logo {
@@ -39,3 +40,8 @@ div.headLink a {
 div.headLink a:hover {
   color: #CA0808;
 }
+
+main {
+  color: black;
+}
+
