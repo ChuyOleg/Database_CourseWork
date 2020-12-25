@@ -92,12 +92,12 @@ create or replace function getFootballerAge() returns trigger as
   $$ begin
   update Footballers
     set Age = extract('year' from age(BirthDate))
-	where Age is Null;
+      where Age is Null;
   return New;
   end $$
   language plpgsql;
   
-create trigger insertAge
+create trigger insertOrUpdateAge
   after insert on Footballers
   for each row
-  execute procedure getFootballerAge();gi
+  execute procedure getFootballerAge();

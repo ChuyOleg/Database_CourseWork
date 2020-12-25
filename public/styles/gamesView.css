@@ -1,0 +1,34 @@
+.gameRow {
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.gameRow .emblem {
+  width: 50px;
+}
+
+.gameRow .name {
+  width: 150px;
+}
+
+.gameDate {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+  border-left: 3px solid black;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
+.gameRow .score {
+  width: 200px;
+}

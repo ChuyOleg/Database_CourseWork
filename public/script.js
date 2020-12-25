@@ -1,8 +1,9 @@
 "use strict";
 
-import { makeView } from '/footballersView.js';
+import { makeFootballersView } from '/views/footballersView.js';
+import { makeGamesView } from '/views/gamesView.js';
 
-const logo = document.querySelector('.logo a');
+const main = document.querySelector('main');
 
 const func = async url => {
 
@@ -13,16 +14,18 @@ const func = async url => {
 }
 
 const hashChange = () => {
+	
+	main.innerHTML = `<div class="loader"></div>`;
+
 	if (document.location.hash === '#footballers') {
-	  makeView();
+	  makeFootballersView();
 	} else if (document.location.hash === '#achievements') {
 	
-	} else {
-	  document.location.hash = '#';
+	} else {	
+	  document.location.hash = '#games';
+	  makeGamesView();
 	}
 };
 
 globalThis.addEventListener('hashchange', hashChange);
 globalThis.onload = hashChange;
-
-logo.addEventListener('click', func);

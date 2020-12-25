@@ -3,7 +3,8 @@ html, body {
   margin: 0;
   font-size: 16px;
   background: #DFDEDC;
-  overflow-x: hidden;
+  overflow-x: initial;
+  min-height: 400px; 
 }
 
 div.logo {
@@ -12,14 +13,13 @@ div.logo {
   margin-bottom: 0px;
 }
 
-div.logo a {
-  display: block;
+div.logo div {
   margin: 0 auto;
   width: 80px;
   height: 107px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url('images/Real_Madrid_logo.png');
+  background-image: url('../images/Real_Madrid_logo.png');
 }
 
 hr {
@@ -45,3 +45,24 @@ main {
   color: black;
 }
 
+.loader {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  position: relative;
+  top: 10vh;
+  border: 10px solid #63BCD5;
+  border-radius: 50%;
+  border-left-color: #3951DB;
+  animation: loader 1.5s linear infinite;
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none !important;
+}

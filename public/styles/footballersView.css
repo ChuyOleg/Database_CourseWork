@@ -1,0 +1,142 @@
+.footballerRow {
+  display: flex;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  padding-left: 0px;
+  font-size: 14px;
+}
+
+.footballerRow .cell {
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.footballerRow .canChange:hover {
+  background: orange;
+}
+
+.footballerRow .number {
+  width: 5%;
+  border-right: 1px solid black;
+  font-weight: bold;
+}
+
+.footballerRow .secondName {
+  width: 13%;
+}
+
+.footballerRow .firstName {
+  width: 13%;
+}
+
+.footballerRow .birthDate {
+  width: 15%;
+}
+
+.footballerRow .country {
+  width: 10%;
+}
+
+.footballerRow .agent {
+  width: 15%;
+}
+
+.footballerRow .fieldPosition {
+  width: 15%;
+}
+
+.footballerRow .goals {
+  width: 7%;
+}
+
+.footballerRow .assists {
+  width: 7%;
+}
+
+.playerRowExample {
+  border: 2px solid green; 
+}
+
+.pickClub {
+  width: 100px;
+  height: 40px;
+  background: orange;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px auto;
+  text-align: center;
+  line-height: 36px;
+  position: relative;
+}
+
+.updateValue {
+  position: fixed;
+  right: 50px;
+  top: 250px;
+  height: 40px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+  z-index: 6;
+  display: none;
+}
+
+.updateButton {
+  position: fixed;
+  right: 85px;
+  top: 295px;
+  height: 40px;
+  width: 80px;
+  text-align: center;
+  line-height: 36px;
+  border: 2px solid black;
+  background: orange;
+  border-radius: 10px;
+  z-index: 6;
+  display: none;
+}
+
+.updateButton:hover {
+  cursor: pointer;
+  background: #F9A489;
+}
+
+.pickClub:hover {
+  cursor: pointer;
+}
+
+.pickClub:hover .clubList {
+  display: block;
+}
+
+.clubInList {
+  background: #C3EF56;
+  border: 2px solid black;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 10px;
+}
+
+.clubInList:hover {
+  background: orange;
+}
+
+.clubList {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -175px;
+  z-index: 5;
+}
+
+.listRow {
+  width: 450px;
+}
+
+.changedCell {
+  background: orange;
+}
