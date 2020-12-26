@@ -52,7 +52,7 @@ const render = async (name, emblem) => {
     <div id="bigTable" class="container">
       <div class="row">
         <div class="col-12 footballerRow playerRowExample">
-          <div class="cell number">№</div>
+          <div class="cell gameNumber">№</div>
           <div class="cell secondName">SecondName</div>
           <div class="cell firstName">FirstName</div>
           <div class="cell birthDate">BirthDate (age)</div>
@@ -69,7 +69,7 @@ const render = async (name, emblem) => {
   	const newBirthDate = footballer['birthdate'].slice(0, 10);
     const statistic = await getData(`/personStatistic?personID=${footballer['footballerid']}`);
     block += `<div class="col-12 footballerRow">
-	    <div id="${footballer['footballerid']}" class="cell canChange number">${footballer['gamenumber']}</div>
+	    <div id="${footballer['footballerid']}" class="cell canChange gameNumber">${footballer['gamenumber']}</div>
 	    <div id="${footballer['footballerid']}" class="cell canChange secondName">${footballer['secondname']}</div>
 	    <div id="${footballer['footballerid']}" class="cell canChange firstName">${footballer['firstname']}</div>
 	    <div id="${footballer['footballerid']}" class="cell canChange birthDate">${newBirthDate} (${footballer['age']})</div>
@@ -105,16 +105,33 @@ const render = async (name, emblem) => {
     if (updateValue.value == '') {
       alert('please, enter a new value');
     } else {
-      console.log(updateValue.value);
+      const activeCell = document.querySelector('.changedCell');
+      const activeID = activeCell.id;
+      const columnName = activeCell.classList[2];
+      const newValue = updateValue.value;
+      
+      let check = false;
+      footballers.forEach(player => {
+        if (player['footballerid'] != activeID && player['gamenumber'] == newValue && columnName == 'gameNumber') {
+          alert('Enter another gameNumber');
+          check = true;
+          return;
+        }
+      });
+      if (check == true) return;
       const response = await fetch('/update', {
         method: 'POST',
-        body: JSON.stringify({ name: 'Oleg'}),
+        body: JSON.stringify({ id: activeID, columnName, newValue }),
         headers: { 'Content-Type': 'application/json' }
       });
-      if (response.ok === false) {
-        alert('Wrong');
+      const data = await response.json();
+      if (data == 400) {
+        alert('Wrong data type');
       } else {
         alert('Ok');
+        main.innerHTML = `<div class="loader"></div>`;
+        makeFootballersView();
+        render(name, emblem);
       }
     }
   });

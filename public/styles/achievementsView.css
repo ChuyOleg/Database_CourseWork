@@ -1,0 +1,93 @@
+.achiRow {
+  font-size: 14px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0 0 5px 5px;
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.achiWrapper .gameRow {
+  margin-bottom: 0px;
+  border-bottom: 5px solid red !important:
+  color: red;
+}
+
+.achiRow .tournament {
+  width: 250px;
+}
+
+.achiRow .season {
+  width: 200px;
+}
+
+.achiRow .tournamentposition {
+  width: 100px;
+}
+
+.achiRow .remove {
+  font-weight: bold;
+  font-size: 24px;
+  width: 50px;
+  background: #F6A6A6;
+  border-left: 1px solid grey;
+}
+
+.achiRow .remove:hover {
+  cursor: pointer;
+  background: red;
+}
+
+div.addAchi {
+  height: 50px;
+  width: 600px;
+  text-align: center;
+  line-height: 50px;
+  margin: 40px auto;
+  display: flex;
+  border: 2px solid black;
+}
+
+div.addAchi input {
+  border: 1px solid black;
+  border-radius: 0px;
+  padding-left: 5px;
+}
+
+div.addAchi .addTournament {
+  width: 200px;
+}
+
+div.addAchi .addTournamentPosition {
+  width: 100px;
+}
+
+div.addAchi .addSeason {
+  width: 100px;
+}
+
+div.addAchi .addBestMatch {
+  width: 150px;
+}
+
+div.addAchi .addButton {
+  border: 1px solid black;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 46px;
+  height: 46px; 
+  width: 50px;
+  background: #73F050;
+}
+
+div.addAchi .addButton:hover {
+  cursor: pointer;
+  background: green;
+}
+

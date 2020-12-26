@@ -18,7 +18,7 @@
   background: orange;
 }
 
-.footballerRow .number {
+.footballerRow .gameNumber {
   width: 5%;
   border-right: 1px solid black;
   font-weight: bold;
@@ -82,6 +82,7 @@
   border-radius: 5px;
   z-index: 6;
   display: none;
+  padding-left: 5px;
 }
 
 .updateButton {
@@ -109,7 +110,7 @@
 }
 
 .pickClub:hover .clubList {
-  display: block;
+  display: block; 
 }
 
 .clubInList {
